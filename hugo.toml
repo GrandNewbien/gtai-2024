@@ -1,0 +1,69 @@
+baseURL = "https://gtai.ca/"
+# include content marked as draft
+buildDrafts = false
+# include content with publishdate in the future
+buildFuture = false
+# include content already expired
+buildExpired = false
+# enable this to make all relative URLs relative to content root. Note that this does not affect absolute URLs.
+relativeURLs = true
+disableRSS = true
+enableRobotsTXT = true
+editor = "nano"
+languageCode = "en"
+language = "en"
+theme = "vncnt-hugo"
+title = "Automation Toronto"
+
+_merge = "none"
+
+[permalinks]
+  fixed = ":title/"
+  posts = "posts/:slug/"
+
+[params]
+  author = "Automation Toronto Links"
+  # email does still work but is deprecated.
+  # use [params.contact.email] instead.
+  #email = "john.doe@example.com"
+  description = "Links page for Automation Toronto"
+  bio = ""
+  avatar = "img/automationtoronto200.png"
+  favicon = "img/favicon.ico"
+  error404 = "There is no such page."
+
+  [params.contact]
+
+    
+    # You may use (inline) tables for more versatility
+    # This allows sorting and even more icons.
+    # Just make sure not to mix key-value pairs, inline tables and tables,
+    # although keeping keeping this order is ok.
+    # See https://toml.io/en/v1.0.0 for details
+    
+    [params.contact.1]
+      name = "Main Website"
+      icon = "globe"
+      link = "https://automationtoronto.com"
+    0 = { name = "ello", icon = "ello", style = "fab", link = "" } # empty links are possible
+    [params.contact.2email]
+      name = "Tej's Email" # may be omitted. defaults to key name
+      icon = "envelope" # may be omitted. defaults to key name
+      link = "mailto:tej@automationtoronto.com"
+    [params.contact.3phone]
+      name = "Tej's Phone" # may be omitted. defaults to key name
+      icon = "phone" # may be omitted. defaults to key name
+      link = "tel:+16474020284"
+    [params.contact.4phone]
+      name = "Add to contacts" # may be omitted. defaults to key name
+      icon = "address-book" # may be omitted. defaults to key name
+      link = "c/c.vcf"  
+    [params.contact.5insta]
+      name = "Instagram"
+      link = "https://instagram.com/automationto"
+      icon = "instagram"
+    [params.contact.6github]
+      name = "Github"
+      link = "https://github.com/GrandNewbien"
+      icon = "github"
+    
